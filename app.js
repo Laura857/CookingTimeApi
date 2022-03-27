@@ -10,7 +10,7 @@ const io = require("socket.io")(server, {
     }
 })
 
-mongoose.connect('mongodb+srv://laura:nodejslaura@cluster0.b6pps.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', // lie le cluster à l'app
+mongoose.connect(process.env.DATABASE_URL, // lie le cluster à l'app
 {
     useNewUrlParser: true,
     useUnifiedTopology:true
